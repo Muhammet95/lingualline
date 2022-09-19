@@ -1,0 +1,56 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: apfel
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: translater
+    container_name: translater-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - translater-network
+
+  db:
+    platform: linux/amd64
+    image: mysql
+    container_name: translater-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - 33060:3306
+    volumes:
+      - db:/var/lib/mysql
+      - ./docker-compose/mysql/is.cnf:/etc/mysql/conf.d/my.cnf
+    networks:
+      - translater-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: translater-nginx
+    restart: unless-stopped
+    ports:
+      - 8181:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - translater-network
+
+networks:
+  translater-network:
+    driver: bridge
+
+volumes:
+  db:
