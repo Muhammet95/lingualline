@@ -7,8 +7,9 @@
         </div>
         <div class="card-body">
             <form action="{{url('/check_offer')}}" method="POST">
+                @csrf
                 <label for="password" class="form-label mt-2">Password:</label>
-                <input type="text" id="password" name="password" class="form-control" required>
+                <input type="text" id="password" name="uuid" class="form-control" required>
                 <button type="submit" class="btn btn-primary w-50 mt-4 mb-2">Check</button>
             </form>
             <div class="col-12 mt-5">
@@ -23,7 +24,8 @@
             <strong style="font-size: 20px;font-weight: bold;">Create New Offer</strong>
         </div>
         <div class="card-body">
-            <form action="{{url('/add-offer')}}" method="POST">
+            <form action="{{url('/add-offer')}}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <label for="fio" class="form-label mt-2">1.Write the full name:</label>
                 <input type="text" id="fio" name="fio" class="form-control" required>
                 <label for="email" class="form-label mt-2">2. Write the e-mail:</label>

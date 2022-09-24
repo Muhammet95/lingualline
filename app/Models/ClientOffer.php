@@ -9,6 +9,7 @@ class ClientOffer extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'uuid',
         'user_name',
         'email',
         'from',

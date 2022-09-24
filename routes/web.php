@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OfferController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [HomeController::class, 'admin']);
     });
 });
+Route::post('/add-offer', [OfferController::class, 'store']);
+Route::post('/check_offer', [OfferController::class, 'index']);
 
 require __DIR__.'/auth.php';
 

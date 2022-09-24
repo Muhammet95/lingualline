@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ClientOffer;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -48,6 +49,7 @@ class HomeController extends Controller
 
     public function admin()
     {
-        return view('layouts.admin');
+        $offers = ClientOffer::paginate(20);
+        return view('layouts.admin', ['offers' => $offers]);
     }
 }
