@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
 });
 Route::post('/add-offer', [OfferController::class, 'store']);
 Route::post('/check_offer', [OfferController::class, 'index']);
+Route::post('/modify_offer', [OfferController::class, 'modify']);
 
 require __DIR__.'/auth.php';
 

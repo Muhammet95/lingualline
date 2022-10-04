@@ -22,30 +22,59 @@
                 <strong>To language: </strong>&nbsp;&nbsp; <span class="text-capitalize">{{$offer->to}}</span>
             </div>
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
-                <strong>Status: </strong>&nbsp;&nbsp; <span>{{$offer->status}}</span>
+                <strong>Status: </strong>&nbsp;&nbsp;
+                <span>
+                    <?php
+                        switch ($offer->status) {
+                            case 'prepare':
+                                echo "Prepare";
+                                break;
+                            case 'wait_payment':
+                                echo "Waiting payment";
+                                break;
+                            case 'translating':
+                                echo "Translating";
+                                break;
+                            case 'completed':
+                                echo "Completed";
+                                break;
+                            case 'cancel':
+                                echo "Canceled";
+                                break;
+                        }
+                    ?>
+                </span>
             </div>
+            @if($offer->status === 'wait_payment')
+                <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
+                    <strong>Payment link: </strong>&nbsp;&nbsp;
+                    <span>
+                    <a href="{{url("payment")}}">Press to go to payment link</a>
+                </span>
+                </div>
+            @endif
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                 <strong>Original file link: </strong>&nbsp;&nbsp;
                 <span>
                     <a href="{{url("files/$offer->uuid/$offer->original_filepath")}}">{{$offer->original_filepath}}</a>
                 </span>
             </div>
-            @isset($offer->template_filepath)
+            @if(isset($offer->template_filepath) && $offer->status !== 'prepare')
                 <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                     <strong>Template file link: </strong>&nbsp;&nbsp;
                     <span>
                     <a href="{{url("files/$offer->uuid/$offer->template_filepath")}}">{{$offer->template_filepath}}</a>
                 </span>
                 </div>
-            @endisset
-            @isset($offer->translate_filepath)
+            @endif
+            @if(isset($offer->translate_filepath) && $offer->status === 'completed')
                 <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                     <strong>Translate file link: </strong>&nbsp;&nbsp;
                     <span>
                     <a href="{{url("files/$offer->uuid/$offer->translate_filepath")}}">{{$offer->translate_filepath}}</a>
                 </span>
                 </div>
-            @endisset
+            @endif
             @if($offer->word_count)
                 <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                     <strong>Word count: </strong>&nbsp;&nbsp; <span>{{$offer->word_count}}</span>
@@ -63,7 +92,7 @@
             @endisset
 
             <div class="col-12 d-flex flex-wrap justify-content-center" style="font-size: 18px;">
-                <strong class="font-italic" style="text-decoration: underline;"> Please check your email! </strong>
+                <strong class="font-italic" style="text-decoration: underline;"> Please check your email! (If you didn't receive mail, check your spam!) </strong>
             </div>
         </div>
     </div>
