@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OfferController;
 
@@ -16,6 +18,13 @@ use App\Http\Controllers\OfferController;
 */
 
 Route::get('/', [HomeController::class, 'main']);
+Route::get('/set_locale/{locale}', function ($locale, Request $request) {
+    if (! in_array($locale, ['en', 'ru', 'tk'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+});
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/why', [HomeController::class, 'why']);
 Route::get('/services', [HomeController::class, 'services']);

@@ -12,8 +12,8 @@
         <span>lingualline1@gmail.com</span><br>
     </div>
     <div class="col-12 col-sm-6 col-md-3">
-        <a href="{{url('/policy')}}" style="color: black;">Policy</a><br>
-        <span>September 2022</span><br><br>
+        <a href="{{url('/policy')}}" style="color: black;">{{__("base.policy")}}</a><br>
+        <span>{{__("base.build_year")}}</span><br><br>
         <span><img src="{{asset('assets/img/Logo.png')}}" alt="Lingualline" width="100"></span><br>
     </div>
     <div class="col-6 d-flex flex-column justify-content-center text-center">

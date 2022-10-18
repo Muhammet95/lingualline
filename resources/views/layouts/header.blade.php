@@ -18,12 +18,19 @@
     <a href="{{url('/')}}" class="col-12 pb-4 text-center">
         <img src="{{asset('assets/img/Logo.png')}}" alt="Lingualline" width="100">
     </a>
-    <a href="{{url('/about')}}" class="btn main-color text-white" style="width: 200px;">About</a>
-    <a href="{{url('/why')}}" class="btn main-color text-white" style="width: 200px;">Why <span class="font-italic">lingualline</span>?</a>
-    <a href="{{url('/services')}}" class="btn main-color text-white" style="width: 200px;">Services</a>
+    <a href="{{url('/about')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.about")}}</a>
+    <a href="{{url('/why')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.why")}} <span class="font-italic">lingualline</span>?</a>
+    <a href="{{url('/services')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.services")}}</a>
     <select id="global_language" class="form-control" style="width: 150px; background-color: rgba(256, 256, 256, 0.6); text-transform: uppercase;">
         <option value="en" selected>🇬🇧 ENGLISH</option>
         <option value="tk">🇹🇷 Türkçe</option>
         <option value="ru">🇷🇺 РУССКИЙ</option>
     </select>
 </header>
+
+<script>
+    $('#global_language').on('change', async (e) => {
+        await fetch(`/set_locale/${e.currentTarget.value}`);
+        document.location.reload();
+    });
+</script>
