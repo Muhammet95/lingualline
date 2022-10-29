@@ -35,8 +35,14 @@
             <h1 style="font-weight: bold; font-style: italic; font-family: Apple">{!! __("base.slogan") !!}</h1>
         </div>
         <div class="col-12 text-center text-black border rounded block-3 mt-2"
-             style="background: rgba(256, 256, 256, 0.7); border-radius: 10px;">
-            <img src="{{url('assets/img/Process Lingulline-3.png')}}" alt="" style="width: 100%; aspect-ratio: 3/1;">
+             style="background-color: rgba(256, 256, 256, 0.7); border-radius: 10px;
+                background-image: url('{{url('assets/img/Process Lingulline-3.png')}}');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 400px;
+             ">
+{{--            <img src="" alt="" style="width: 100%; aspect-ratio: 3/1;">--}}
         </div>
 
     </main>
