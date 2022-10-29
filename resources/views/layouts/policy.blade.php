@@ -32,9 +32,9 @@
                 <li>
                     {{__("base.policy_text8")}}
                 </li>
-                <li>
-                    <span class="font-italic">lingualline</span> {{__("base.policy_text9")}}
-                </li>
+{{--                <li>--}}
+{{--                    <span class="font-italic">lingualline</span> {{__("base.policy_text9")}}--}}
+{{--                </li>--}}
             </ul>
         </div>
     </div>
