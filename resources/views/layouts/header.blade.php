@@ -24,9 +24,9 @@
     <a href="{{url('/')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.order")}}</a>
     <a href="{{url('/')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.check")}}</a>
     <select id="global_language" class="form-control" style="width: 150px; background-color: rgba(256, 256, 256, 0.6); text-transform: uppercase;">
-        <option value="en" selected>🇬🇧 ENGLISH</option>
-        <option value="tk">🇹🇷 Türkçe</option>
-        <option value="ru">🇷🇺 РУССКИЙ</option>
+        <option value="en" selected>ENGLISH</option>
+        <option value="tk">Türkçe</option>
+        <option value="ru">РУССКИЙ</option>
     </select>
 </header>
 

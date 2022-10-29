@@ -14,7 +14,12 @@
     <div class="col-12 col-sm-6 col-md-3">
         <a href="{{url('/policy')}}" style="color: black;">{{__("base.policy")}}</a><br>
         <span>{{__("base.build_year")}}</span><br><br>
-        <span><img src="{{asset('assets/img/Logo.png')}}" alt="Lingualline" width="100"></span><br>
+        <span>
+{{--            <img src="{{asset('assets/img/Logo.png')}}" alt="Lingualline" width="100">--}}
+            <a href="/" style="text-decoration: none;color: black; font-style: italic; font-size: 20px;">
+                lingualline &#169;
+            </a>
+        </span><br>
     </div>
     <div class="col-6 d-flex flex-column justify-content-center text-center">
         <img src="{{asset('/assets/img/pay-logo.png')}}" alt="pay-logo" height="30">

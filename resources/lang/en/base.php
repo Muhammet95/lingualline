@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'slogan' => 'Have the file translated fast with reasonable price.',
+    'slogan' => '#quicktranslation &nbsp;&nbsp;#correcttranslation &nbsp;&nbsp;#userfriendlyplatform &nbsp;&nbsp;#reasonableprice',
     'about' => 'About',
     'why' => 'Why',
     'contact' => 'Contact',

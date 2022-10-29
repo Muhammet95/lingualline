@@ -30,9 +30,9 @@
 {{--            @include('layouts.flags')--}}
 {{--        </div>--}}
         @yield('content')
-        <div class="col-12 text-center text-black border rounded block-3"
+        <div class="col-12 text-center text-black border rounded block-3 text-primary"
              style="background: rgba(256, 256, 256, 0.7); border-radius: 10px;">
-            <h1 style="font-weight: bold; font-style: italic; font-family: Apple">{{__("base.slogan")}}</h1>
+            <h1 style="font-weight: bold; font-style: italic; font-family: Apple">{!! __("base.slogan") !!}</h1>
         </div>
         <div class="col-12 text-center text-black border rounded block-3 mt-2"
              style="background: rgba(256, 256, 256, 0.7); border-radius: 10px;">

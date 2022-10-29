@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'slogan' => 'Dosyanızı hızlı ve uygun fiyata tercüme ettirin.',
+    'slogan' => '#hızlıtercüme &nbsp;&nbsp;#doğrutercüme &nbsp;&nbsp;#kolaykullanımlıplatform &nbsp;&nbsp;#uygunfiyat',
     'about' => 'Hakkında',
     'why' => 'Neden lingualline?',
     'contact' => 'İletişim',
