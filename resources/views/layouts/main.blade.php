@@ -1,9 +1,9 @@
 @extends('layouts.index')
 
 @section('content')
-    <div class="col-12 d-flex justify-content-around">
+    <div class="col-12 d-flex justify-content-around flex-wrap">
         @if($type !== 'create')
-            <div class="col-4 mt-2 mb-2  block-2 border rounded text-center p-0 card" style="background: rgba(256, 256, 256, 0.7)">
+            <div class="col-10 col-md-4 mt-2 mb-2  block-2 border rounded text-center p-0 card" style="background: rgba(256, 256, 256, 0.7)">
                 <div class="card-header">
                     <strong style="font-size: 20px;font-weight: bold;">{{__("base.check_offer")}}</strong>
                 </div>
@@ -24,7 +24,7 @@
         @endif
 
         @if($type !== 'check')
-            <div class="col-7 mt-2 mb-2  block-3 border rounded text-center p-0 card" style="background: rgba(256, 256, 256, 0.7)">
+            <div class="col-10 col-md-7 mt-2 mb-2  block-3 border rounded text-center p-0 card" style="background: rgba(256, 256, 256, 0.7)">
                 <div class="card-header">
                     <strong style="font-size: 20px;font-weight: bold;">{{__("base.create_offer")}}</strong>
                 </div>
