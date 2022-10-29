@@ -105,6 +105,7 @@ class OfferController
             Mail::to($offer->email)->send(new UserMail($offer));
 
         $offers = ClientOffer::query()->orderByDesc('id')->paginate(20);
-        return view('layouts.admin', ['offers' => $offers]);
+//        return view('layouts.admin', ['offers' => $offers]);
+        return redirect('/admin');
     }
 }
