@@ -41,7 +41,7 @@
                                 <label for="language">{{__("base.from")}}</label>
                                 <select name="from" id="language" class="form-control">
                                     <option value="english" selected>{{__("base.english")}}</option>
-                                    <option value="turkey">{{__("base.turkey")}}</option>
+                                    <option value="turkish">{{__("base.turkey")}}</option>
                                     <option value="russian">{{__("base.russian")}}</option>
                                 </select>
                             </div>
@@ -49,7 +49,7 @@
                                 <label for="to">{{__("base.to")}}</label>
                                 <select name="to" id="to" class="form-control">
                                     <option value="english" selected>{{__("base.english")}}</option>
-                                    <option value="turkey" selected>{{__("base.turkey")}}</option>
+                                    <option value="turkish" selected>{{__("base.turkey")}}</option>
                                     <option value="russian">{{__("base.russian")}}</option>
                                 </select>
                             </div>
