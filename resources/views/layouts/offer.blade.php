@@ -12,7 +12,7 @@
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                 <strong>{{__("base.mail")}}: </strong>&nbsp;&nbsp; <span>{{$offer->email}}</span>
             </div>
-            <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
+            <div class="col-12 d-flex flex-wrap" style="font-size: 18px;text-decoration: underline;">
                 <strong>{{__("base.password")}}: </strong>&nbsp;&nbsp; <span>{{$offer->uuid}}</span>
             </div>
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
@@ -23,7 +23,9 @@
             </div>
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                 <strong>{{__("base.status")}}: </strong>&nbsp;&nbsp;
-                <span>
+                <span class="bg-success text-white"
+                      style="padding: 0 5px 0 5px;"
+                >
                     <?php
                         switch ($offer->status) {
                             case 'prepare':
@@ -90,6 +92,11 @@
                     <strong>{{__("base.price_per_word")}}: </strong>&nbsp;&nbsp; <span>{{$offer->tariff}}$</span>
                 </div>
             @endisset
+            <form action="/check_offer" method="post">
+                @csrf
+                <input type="hidden" name="uuid" value="{{$offer->uuid}}">
+                <button type="submit" class="btn btn-primary">Check order</button>
+            </form>
 
             <div class="col-12 d-flex flex-wrap justify-content-center" style="font-size: 18px;">
                 <strong class="font-italic" style="text-decoration: underline;"> {{__("base.check_mail_notification")}} </strong>
