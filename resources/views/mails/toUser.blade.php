@@ -23,7 +23,8 @@
     Have a good day. <br>
     Kind regards. <br>
 
-    <i>lingualline</i><br><br>
+    <i>lingualline</i><br>
+    <hr>
 
 
     <p>Уважаемый / Уважаемая {{$offer->user_name}},</p>
@@ -49,7 +50,8 @@
     Хорошего дня. <br>
     С уважением. <br>
 
-    <i>lingualline</i><br><br>
+    <i>lingualline</i><br>
+    <hr>
 
 
     <p>Sayın {{$offer->user_name}},</p>
@@ -75,7 +77,7 @@
     İyi günler. <br>
     Saygılarımızla. <br>
 
-    <i>lingualline</i><br><br>
+    <i>lingualline</i><br>
 
 {{--    <div style="border: 1px solid gray; border-radius: 10px; padding: 10px;">--}}
 {{--        <div style="border-bottom: 1px solid gray; color: #1e7e34;">--}}
