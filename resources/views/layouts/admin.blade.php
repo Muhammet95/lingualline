@@ -47,6 +47,7 @@
                                 <option value="translating" {{$offer->status === 'translating' ? "selected" : ""}}>Translating</option>
                                 <option value="completed" {{$offer->status === 'completed' ? "selected" : ""}}>Completed</option>
                                 <option value="cancel" {{$offer->status === 'cancel' ? "selected" : ""}}>Canceled</option>
+                                <option value="block" {{$offer->status === 'block' ? "selected" : ""}} class="text-danger">Remove</option>
                             </select>
                         </td>
                         <td>

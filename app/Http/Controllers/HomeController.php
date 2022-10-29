@@ -71,7 +71,10 @@ class HomeController extends Controller
 
     public function admin()
     {
-        $offers = ClientOffer::query()->orderByDesc('id')->paginate(20);
+        $offers = ClientOffer::query()
+            ->where('status', 'block')
+            ->orderByDesc('id')
+            ->paginate(20);
         return view('layouts.admin', ['offers' => $offers]);
     }
 }

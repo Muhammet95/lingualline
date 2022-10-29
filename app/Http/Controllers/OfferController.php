@@ -101,7 +101,7 @@ class OfferController
             $offer->translate_filepath = $translate_filename;
         }
         $offer->save();
-        if ($status_changes)
+        if ($status_changes && $offer->status !== 'block')
             Mail::to($offer->email)->send(new UserMail($offer));
 
         $offers = ClientOffer::query()->orderByDesc('id')->paginate(20);
