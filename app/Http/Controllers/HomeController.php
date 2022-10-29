@@ -25,9 +25,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function main()
+    public function main($type = null)
     {
-        return view('layouts.main');
+        return view('layouts.main', ['type' => $type]);
     }
 
     public function about()

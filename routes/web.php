@@ -17,7 +17,6 @@ use App\Http\Controllers\OfferController;
 |
 */
 
-Route::get('/', [HomeController::class, 'main']);
 Route::get('/set_locale/{locale}', function ($locale, Request $request) {
     if (! in_array($locale, ['en', 'ru', 'tk'])) {
         abort(400);
@@ -40,6 +39,8 @@ Route::middleware('auth')->group(function () {
 Route::post('/add-offer', [OfferController::class, 'store']);
 Route::post('/check_offer', [OfferController::class, 'index']);
 Route::post('/modify_offer', [OfferController::class, 'modify']);
+
+Route::get('/{type?}', [HomeController::class, 'main']);
 
 require __DIR__.'/auth.php';
 
