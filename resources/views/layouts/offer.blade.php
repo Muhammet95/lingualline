@@ -92,10 +92,9 @@
                     <strong>{{__("base.price_per_word")}}: </strong>&nbsp;&nbsp; <span>{{$offer->tariff}}$</span>
                 </div>
             @endisset
-            <form action="/check_offer" method="post">
-                @csrf
-                <input type="hidden" name="uuid" value="{{$offer->uuid}}">
-                <button type="submit" class="btn btn-primary">Check order</button>
+            <form action="/check" method="get">
+{{--                <input type="hidden" name="uuid" value="{{$offer->uuid}}">--}}
+                <button type="submit" class="btn btn-primary">Check Order</button>
             </form>
 
             <div class="col-12 d-flex flex-wrap justify-content-center" style="font-size: 18px;">
