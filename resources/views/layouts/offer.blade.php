@@ -92,7 +92,7 @@
             @endisset
 
             <div class="col-12 d-flex flex-wrap justify-content-center" style="font-size: 18px;">
-                <strong class="font-italic" style="text-decoration: underline;"> {{__("base.check_mail.notification")}} </strong>
+                <strong class="font-italic" style="text-decoration: underline;"> {{__("base.check_mail_notification")}} </strong>
             </div>
         </div>
     </div>

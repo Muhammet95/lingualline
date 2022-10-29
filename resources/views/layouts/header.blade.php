@@ -19,8 +19,10 @@
         <img src="{{asset('assets/img/Logo.png')}}" alt="Lingualline" width="100">
     </a>
     <a href="{{url('/about')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.about")}}</a>
-    <a href="{{url('/why')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.why")}} <span class="font-italic">lingualline</span>?</a>
     <a href="{{url('/services')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.services")}}</a>
+    <a href="{{url('/contact')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.contact")}}</a>
+    <a href="{{url('/')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.order")}}</a>
+    <a href="{{url('/')}}" class="btn main-color text-white" style="width: 200px;">{{__("base.check")}}</a>
     <select id="global_language" class="form-control" style="width: 150px; background-color: rgba(256, 256, 256, 0.6); text-transform: uppercase;">
         <option value="en" selected>🇬🇧 ENGLISH</option>
         <option value="tk">🇹🇷 Türkçe</option>

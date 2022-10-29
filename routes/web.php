@@ -27,8 +27,10 @@ Route::get('/set_locale/{locale}', function ($locale, Request $request) {
 });
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/why', [HomeController::class, 'why']);
+Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/services', [HomeController::class, 'services']);
 Route::get('/policy', [HomeController::class, 'policy']);
+Route::post('/send', [HomeController::class, 'send']);
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {

@@ -64,7 +64,7 @@ class OfferController
 
         $this->uuid = $uuid;
 
-        Mail::to('bayramh2011@gmail.com')->send(new AdminMail($offer));
+        Mail::to('lingualline1@gmail.com')->send(new AdminMail($offer));
         Mail::to($offer->email)->send(new UserMail($offer));
 
         return self::index($request);
