@@ -7,7 +7,7 @@
         </div>
         <div class="card-body">
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
-                <strong>{{__("base.name")}}: </strong>&nbsp;&nbsp; <span>{{$offer->user_name}}</span>
+                <strong>{{__("base.fullname")}}: </strong>&nbsp;&nbsp; <span>{{$offer->user_name}}</span>
             </div>
             <div class="col-12 d-flex flex-wrap" style="font-size: 18px;">
                 <strong>{{__("base.mail")}}: </strong>&nbsp;&nbsp; <span>{{$offer->email}}</span>

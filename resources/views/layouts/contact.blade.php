@@ -25,7 +25,7 @@
             </form>
             <div class="services-font">
                 <b>WhatsApp:</b> +905050181191 <br>
-                <b>E-mail:</b> lingualline1@gmail.com <br>
+                <b>E-Mail:</b> lingualline1@gmail.com <br>
                 <br>
                 Hürrüyet Mahallesi, Esin Sokak, 17/1, Kağıthane, İstanbul, Türkiye <br>
             </div>

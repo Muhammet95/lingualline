@@ -8,7 +8,7 @@
     <div class="col-12 col-sm-6 col-md-3">
         <span>WhatsApp:</span><br>
         <span>+905050181191</span><br>
-        <span>e-mail:</span><br>
+        <span>E-Mail:</span><br>
         <span>lingualline1@gmail.com</span><br>
     </div>
     <div class="col-12 col-sm-6 col-md-3">
