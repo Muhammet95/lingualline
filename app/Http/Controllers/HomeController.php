@@ -72,7 +72,7 @@ class HomeController extends Controller
     public function admin()
     {
         $offers = ClientOffer::query()
-            ->where('status', 'block')
+            ->whereNot('status', 'block')
             ->orderByDesc('id')
             ->paginate(20);
         return view('layouts.admin', ['offers' => $offers]);
