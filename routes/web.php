@@ -42,8 +42,5 @@ Route::post('/check_offer', [OfferController::class, 'index']);
 Route::post('/modify_offer', [OfferController::class, 'modify']);
 
 Route::get('/{type?}', [HomeController::class, 'main']);
-Route::get('/login', [LoginController::class, 'create'])
-    ->middleware('guest')
-    ->name('login');
 
 
