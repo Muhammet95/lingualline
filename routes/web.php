@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -16,7 +17,7 @@ use App\Http\Controllers\OfferController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+require __DIR__.'/auth.php';
 Route::get('/set_locale/{locale}', function ($locale, Request $request) {
     if (! in_array($locale, ['en', 'ru', 'tk'])) {
         abort(400);
@@ -41,6 +42,8 @@ Route::post('/check_offer', [OfferController::class, 'index']);
 Route::post('/modify_offer', [OfferController::class, 'modify']);
 
 Route::get('/{type?}', [HomeController::class, 'main']);
+Route::get('/login', [LoginController::class, 'create'])
+    ->middleware('guest')
+    ->name('login');
 
-require __DIR__.'/auth.php';
 
